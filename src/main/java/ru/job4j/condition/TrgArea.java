@@ -8,7 +8,7 @@ public class TrgArea {
         double pc = p - c;
         double pabc = p * pa * pb * pc;
         double rsl = Math.sqrt(pabc);
-       
+
         return rsl;
     }
 
