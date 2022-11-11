@@ -15,13 +15,12 @@ public class ConverterTest {
     }
 
     @Test
-
-        public void whenConvert180RblThen3Dlr() {
-            float in = 180;
-            float expected = 3;
-            float out = Converter.rubleToDollar(in);
-            float eps = 0.0001f;
-            Assert.assertEquals(expected, out, eps);
-        }
+    public void whenConvert180RblThen3Dlr() {
+        float in = 180;
+        float expected = 3;
+        float out = Converter.rubleToDollar(in);
+        float eps = 0.0001f;
+        Assert.assertEquals(expected, out, eps);
     }
+}
 
