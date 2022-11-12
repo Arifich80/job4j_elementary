@@ -13,7 +13,6 @@ public class FitTest {
         Assert.assertEquals(expected, out, 0.01);
     }
 
-    @SuppressWarnings("checkstyle:EmptyLineSeparator")
     @Test
     public void whenWoman170Than69() {
         short in = 170;
