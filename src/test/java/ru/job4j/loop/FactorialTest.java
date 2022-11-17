@@ -18,6 +18,5 @@ public class FactorialTest {
         int n = 0;
         int out = Factorial.calc(n);
         assertThat(out).isEqualTo(expected);
-        /* напишите здесь тест, проверяющий, что факториал для числа 0 равен 1. */
     }
 }
