@@ -3,8 +3,7 @@ package ru.job4j.loop;
 public class Counter2 {
     public static int sum(int start, int finish) {
         int sum = 0;
-        int i = start;
-        for (i = start; i <= finish; i++) {
+        for (int i = start; i <= finish; i++) {
             sum = sum + start++;
         }
         return sum;
@@ -12,8 +11,7 @@ public class Counter2 {
 
     public static int sumByEven(int start, int finish) {
         int sum = 0;
-        int i;
-        for (i = start; i <= finish; i++) {
+        for (int i = start; i <= finish; i++) {
             if (i % 2 == 0) {
                 sum = sum + i++;
             }
