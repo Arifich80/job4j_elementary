@@ -8,7 +8,7 @@ public class Fitness {
             nik *= 2;
             month++;
         }
-            return month;
+        return month;
     }
 
     public static void main(String[] args) {
