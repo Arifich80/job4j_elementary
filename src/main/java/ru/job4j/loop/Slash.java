@@ -8,9 +8,9 @@ public class Slash {
                 boolean right = (row + cell) == size - 1; /* добавить условие для правой диагонали - из левого нижнего в правый верхний*/
                 if (left) {
                     System.out.print("0");
-               } else if (right) {
-                         System.out.print("0");
-               } else {
+                } else if (right) {
+                    System.out.print("0");
+                } else {
                     System.out.print(" ");
                 }
             }
