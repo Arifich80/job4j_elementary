@@ -4,19 +4,19 @@ public class ArrayChar {
 
     public static boolean startsWith(char[] word, char[] pref) {
         boolean result = true;
-        for (int i = 0; i < word.length; i++) {
-                if (pref[i] != word[i]) {
-                    result = false;
-                    break;
-                }
+        for (int i = 0; i < word.length && i < pref.length; i++) {
+            if (pref[i] != word[i]) {
+                result = false;
+                break;
+            }
         }
         return result;
     }
 
     public static void main(String[] args) {
         char[] word = new char[]{'H', 'e', 'l', 'l', 'o'};
-        char[] pref = new char[]{'H', 'e'};
-        System.out.println(ArrayChar.startsWith(pref, word));
+        char[] pref = new char[]{'H', 't'};
+        System.out.println(ArrayChar.startsWith(word, pref));
 
     }
 }
