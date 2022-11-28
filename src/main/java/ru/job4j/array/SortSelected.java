@@ -10,7 +10,7 @@ public class SortSelected {
         for (int i = 0; i < data.length; i++) {
             int min = MinDiapason.findMin(data, i, data.length - 1);
             int index = FindLoop.indexInRange(data, min, i, data.length - 1);
-            swap(data, min, index);
+            swap(data, i, index);
         }
         return data;
     }
@@ -18,6 +18,6 @@ public class SortSelected {
     public static void main(String[] args) {
         int[] data = new int[]{4, 2, 3, 1, 5};
 
-            System.out.println(Arrays.toString(SortSelected.sort(data)));
-        }
+        System.out.println(Arrays.toString(SortSelected.sort(data)));
     }
+}
