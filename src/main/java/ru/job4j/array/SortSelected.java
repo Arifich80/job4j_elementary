@@ -16,7 +16,7 @@ public class SortSelected {
     }
 
     public static void main(String[] args) {
-        int[] data = new int[]{4, 2, 3, 1};
+        int[] data = new int[]{4, 2, 3, 1, 5};
 
             System.out.println(Arrays.toString(SortSelected.sort(data)));
         }
