@@ -34,16 +34,26 @@ public class MatrixCheck {
         return rsl;
     }
 
-    public static void main(String[]args) {
-        char[][] board = {
-                {'X', ' ', ' '},
-                {' ', 'X', ' '},
-                {' ', ' ', 'X'},
-
-        };
-        int column = 2;
-        System.out.println(MatrixCheck.extractDiagonal(board));
+    public static boolean isWin(char[][] board) {
+        boolean result = false;
+        for (int i = 0; i < board.length; i++) {
+            if (monoHorizontal(board, i) || monoVertical(board, i)) {
+                result = true;
+                break;
+            }
+        }
+        return result;
     }
 
+    public static void main(String[]args) {
+        char[][] board = {
+                {'X', ' ', ' ', ' ', ' '},
+                {'X', ' ', ' ', ' ', ' '},
+                {'X', ' ', ' ', ' ', ' '},
+                {'X', ' ', ' ', ' ', ' '},
+                {'X', ' ', ' ', ' ', ' '},
+        };
+        System.out.println(MatrixCheck.isWin(board));
+    }
 }
 
