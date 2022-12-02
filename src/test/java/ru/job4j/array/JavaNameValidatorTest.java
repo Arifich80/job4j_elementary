@@ -1,6 +1,7 @@
 package ru.job4j.array;
 
 import org.junit.jupiter.api.Test;
+import static org.assertj.core.api.Assertions.*;
 import static ru.job4j.array.JavaNameValidator.*;
 
 class JavaNameValidatorTest {
@@ -43,21 +44,5 @@ class JavaNameValidatorTest {
     @Test
     void whenLatNumberAndTwoSpecialSymbolsUnderValid() {
         assertThat(isNameValid("fir$t_u$er_1")).isTrue();
-    }
-
-    @org.junit.Test
-    public void isNameValid() {
-    }
-
-    @org.junit.Test
-    public void isSpecialSymbol() {
-    }
-
-    @org.junit.Test
-    public void isUpperLatinLetter() {
-    }
-
-    @org.junit.Test
-    public void isLowerLatinLetter() {
     }
 }
