@@ -5,12 +5,12 @@ import static java.lang.Character.isUpperCase;
 
 public class JavaNameValidator {
     public static boolean isNameValid(String name) {
-        boolean valid = true;
-        if (name.isEmpty() || isUpperCase(name.codePointAt(0)) || isDigit(name.codePointAt(0))) {
+        boolean valid = !name.isEmpty() && !isUpperCase(name.codePointAt(0)) && !isDigit(name.codePointAt(0));
+        if (valid) {
             for (int i = 1; i < name.length(); i++) {
                 int code = name.codePointAt(i);
-                if (!isSpecialSymbol(code) || !isUpperLatinLetter(code) || !isLowerLatinLetter(code)) {
-                    valid = false;
+                if (!isSpecialSymbol(code) || isUpperLatinLetter(code) || isLowerLatinLetter(code)) {
+                    valid = true;
                     break;
                 }
             }
