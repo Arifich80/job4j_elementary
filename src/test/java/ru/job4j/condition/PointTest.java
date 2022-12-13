@@ -8,11 +8,9 @@ public class PointTest {
     @Test
     public void when23to45then2dot82() {
         double expected = 2.82;
-        int x1 = 2;
-        int y1 = 3;
-        int x2 = 4;
-        int y2 = 5;
-        double out = Point.distance(x1, y1, x2, y2);
+        Point a = new Point(2, 3);
+        Point b = new Point(4, 5);
+        double out = a.distance(b);
         Assert.assertEquals(expected, out, 0.01);
 
     }
@@ -20,23 +18,19 @@ public class PointTest {
     @Test
     public void when00to20then2() {
         double expected = 2.0;
-        int x1 = 0;
-        int y1 = 0;
-        int x2 = 2;
-        int y2 = 0;
-        double out = Point.distance(x1, y1, x2, y2);
+        Point a = new Point(0, 0);
+        Point b = new Point(0, 2);
+        double out = a.distance(b);
         Assert.assertEquals(expected, out, 0.01);
 
     }
 
     @Test
-    public void when46tomin1mib8then14dot86() {
+    public void when46tomin1min8then14dot86() {
         double expected = 14.86;
-        int x1 = 4;
-        int y1 = 6;
-        int x2 = -1;
-        int y2 = -8;
-        double out = Point.distance(x1, y1, x2, y2);
+        Point a = new Point(4, 6);
+        Point b = new Point(-1, -8);
+        double out = a.distance(b);
         Assert.assertEquals(expected, out, 0.01);
 
     }
